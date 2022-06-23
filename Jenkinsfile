@@ -1,5 +1,4 @@
 pipeline {
-
 	agent any
 
 	stages {
@@ -12,7 +11,7 @@ pipeline {
 
 		stage("save Artifact") {
 			steps {
-                archiveArtifacts artifacts: '*/.jar', followSymlinks: false
+                archiveArtifacts artifacts: 'target/*.jar', followSymlinks: false
             }
 		}
 	}
